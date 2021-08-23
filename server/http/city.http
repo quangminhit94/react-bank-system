@@ -1,0 +1,40 @@
+
+@baseUrl = http://localhost:5000/api
+@resourseName = cities
+
+# Cities
+# @name getAllCities
+GET {{baseUrl}}/{{resourseName}}?_page=1_limit=10
+
+# City id
+# @name getCityById
+GET {{baseUrl}}/{{resourseName}}/f09ec018-d46b-4c69-8d47-57b866a1cc14
+
+# Cities
+# @name getCitiesByBalance
+GET {{baseUrl}}/{{resourseName}}?_page=1_limit=10balance_lte: 5000
+
+###
+# @name addCity
+POST {{baseUrl}}/{{resourseName}}
+content-type: application/json
+
+{
+    "name": "HCM"
+}
+
+###
+
+# @name updateCity
+PATCH {{baseUrl}}/{{resourseName}}/2
+content-type: application/json
+
+{
+    "name": "HCM"
+}
+
+###
+# @name deleteCity
+DELETE {{baseUrl}}/{{resourseName}}/6
+
+# Transaction

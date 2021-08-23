@@ -1,0 +1,33 @@
+
+@baseUrl = http://localhost:5000/api
+@resourseName = transactions
+
+# transactions
+# @name getAllTransactions
+GET {{baseUrl}}/{{resourseName}}?_page=1_limit=10
+
+###
+# @name addTransaction
+POST {{baseUrl}}/{{resourseName}}
+content-type: application/json
+
+{
+    "type": "payment",
+    "amount": 100,
+}
+
+###
+
+# @name updateTransaction
+PATCH {{baseUrl}}/{{resourseName}}/2
+content-type: application/json
+
+{
+    "memberScore": 5
+}
+
+###
+# @name deleteTransaction
+DELETE {{baseUrl}}/{{resourseName}}/6
+
+# Transaction

@@ -1,0 +1,38 @@
+
+@baseUrl = http://localhost:5000/api
+@resourseName = customers
+
+# customers
+# @name getAllCustomers
+GET {{baseUrl}}/{{resourseName}}?_page=1_limit=10
+
+###
+# @name getCustomerById
+GET {{baseUrl}}/{{resourseName}}/bf37825b-08d6-42fd-b96b-2a283e7ef93e
+
+###
+# @name addCustomer
+POST {{baseUrl}}/{{resourseName}}
+content-type: application/json
+
+{
+    "name": "Deana Roman",
+    "memberScore": 8,
+    "gender": "male",
+}
+
+###
+
+# @name updateCustomer
+PATCH {{baseUrl}}/{{resourseName}}/2
+content-type: application/json
+
+{
+    "memberScore": 5
+}
+
+###
+# @name deleteCustomer
+DELETE {{baseUrl}}/{{resourseName}}/6
+
+# Transaction

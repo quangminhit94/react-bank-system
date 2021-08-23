@@ -1,0 +1,40 @@
+
+@baseUrl = http://localhost:5000/api
+@resourseName = bankers
+
+# Bankers
+# @name getAllBankers
+GET {{baseUrl}}/{{resourseName}}?_page=1_limit=10
+
+# Banker id
+# @name getBankerById
+GET {{baseUrl}}/{{resourseName}}/f09ec018-d46b-4c69-8d47-57b866a1cc14
+
+# Bankers
+# @name getBankersByBalance
+GET {{baseUrl}}/{{resourseName}}?_page=1_limit=10balance_lte: 5000
+
+###
+# @name addBanker
+POST {{baseUrl}}/{{resourseName}}
+content-type: application/json
+
+{
+    "name": "Deana Roman",
+}
+
+###
+
+# @name updateBanker
+PATCH {{baseUrl}}/{{resourseName}}/2
+content-type: application/json
+
+{
+    "name": "Edit name"
+}
+
+###
+# @name deleteBanker
+DELETE {{baseUrl}}/{{resourseName}}/6
+
+# Transaction

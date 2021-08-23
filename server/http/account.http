@@ -1,0 +1,41 @@
+
+@baseUrl = http://localhost:5000/api
+@resourseName = accounts
+
+# Accounts
+# @name getAllAccounts
+GET {{baseUrl}}/{{resourseName}}?_page=1_limit=10
+
+# Account id
+# @name getAccountById
+GET {{baseUrl}}/{{resourseName}}/f09ec018-d46b-4c69-8d47-57b866a1cc14
+
+# Accounts
+# @name getAccountsByBalance
+GET {{baseUrl}}/{{resourseName}}?_page=1_limit=10balance_lte: 5000
+
+###
+# @name addAccount
+POST {{baseUrl}}/{{resourseName}}
+content-type: application/json
+
+{
+    "fullName": "Deana Roman",
+    "accountNumber": 1234567891212,
+}
+
+###
+
+# @name updateAccount
+PATCH {{baseUrl}}/{{resourseName}}/2
+content-type: application/json
+
+{
+    "fullName": "Edit name"
+}
+
+###
+# @name deleteAccount
+DELETE {{baseUrl}}/{{resourseName}}/6
+
+# Transaction

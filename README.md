@@ -5,34 +5,34 @@ https://github.com/quangminhit94/react-bank-system/blob/main/server/ReadMe.MD
 
 # Frontend
 ## Plan
-UI: material ui
-Routing: React Router dom, react connected router
-Form: React hook form v7
-Form validate: Yup
-Http client: axios
+- UI: material ui
+- Routing: React Router dom, react connected router
+- Form: React hook form v7
+- Form validate: Yup
+- Http client: axios
 
 ## Routing
 
-/login
+- /login
 
-/admin/dashboard
+- /admin/dashboard
 <!-- customers -->
-/admin/customers
-/admin/customers/{id}
-/admin/customers/add
-/admin/customers/edit/{id}
+- /admin/customers
+- /admin/customers/{id}
+- /admin/customers/add
+- /admin/customers/edit/{id}
 
 <!-- accounts -->
-/admin/accounts
-/admin/accounts/{id}
+- /admin/accounts
+- /admin/accounts/{id}
 <!-- transactions -->
-/admin/transactions
-/admin/transactions/{id}
+- /admin/transactions
+- /admin/transactions/{id}
 ## CUSTOMERS
-/admin/customers
-/admin/customers/{id}
-/admin/customers/add
-/admin/customers/edit/{id}
+- /admin/customers
+- /admin/customers/{id}
+- /admin/customers/add
+- /admin/customers/edit/{id}
 
 - Listing
   - Search by name

@@ -1,12 +1,17 @@
-# Template react apPl
-# Plan
+# React Bank System
+
+# Backend 
+https://github.com/quangminhit94/react-bank-system/blob/main/server/ReadMe.MD
+
+# Frontend
+## Plan
 UI: material ui
 Routing: React Router dom, react connected router
 Form: React hook form v7
 Form validate: Yup
 Http client: axios
 
-# Routing
+## Routing
 
 /login
 
@@ -23,16 +28,6 @@ Http client: axios
 <!-- transactions -->
 /admin/transactions
 /admin/transactions/{id}
-
-# Analyze model
-1 Customer - many accounts
-1 account - many transaction
-
-# Api function
-
-- get all accounts has balance < 5000
-- get all account with transaction amount sort by desc
-
 ## CUSTOMERS
 /admin/customers
 /admin/customers/{id}

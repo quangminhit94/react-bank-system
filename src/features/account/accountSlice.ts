@@ -13,8 +13,8 @@ const initialState: AccountState = {
   loading: false,
   list: [],
   filter: {
-    _page: 1,
-    _limit: 10,
+    // _page: 1,
+    // _limit: 20,
   },
   pagination: {
     _page: 1,
@@ -52,7 +52,7 @@ export const selectAccountListLoading = (state: RootState) => state.account.load
 export const selectAccountListFilter = (state: RootState) => state.account.filter;
 export const selectAccountListPagination = (state: RootState) => state.account.pagination;
 export const selectAccountMap = createSelector(selectAccountList, (accountList) =>
-  accountList.reduce((map: {[key: string]: Account}, account) => {
+  accountList?.reduce((map: {[key: string]: Account}, account) => {
     map[account.customerId] = account
     return map
   }, {})

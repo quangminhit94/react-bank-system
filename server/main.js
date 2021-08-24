@@ -39,9 +39,9 @@ router.render = (req, res) => {
         _totalRows: Number.parseInt(totalCount)
       }
     }
-  return res.jsonp(result)
+    return res.jsonp(result)
   }
-  res.jsonp(res.locals.data)
+  return res.jsonp(res.locals)
 }
 
 // Use default router

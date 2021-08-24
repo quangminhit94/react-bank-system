@@ -42,7 +42,6 @@ export default function ListPage () {
   const accountMap = useAppSelector(selectAccountMap)
   const cityList = useAppSelector(selectCityList)
   const cityMap = useAppSelector(selectCityMap)
-  console.log(cityMap);
 
   const handlePageChange = (event: any, page: number) => {
     dispatch(

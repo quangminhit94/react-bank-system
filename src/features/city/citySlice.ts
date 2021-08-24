@@ -14,21 +14,20 @@ const initialState: CityState = {
   list: [],
   filter: {
     _page: 1,
-    _limit: 15,
+    _limit: 10,
   },
   pagination: {
     _page: 1,
-    _limit: 15,
-    _totalRows: 15,
+    _limit: 10,
+    _totalRows: 10,
   }
 };
-console.log('city slice');
+
 export const citySlice = createSlice({
   name: 'city',
   initialState,
   reducers: {
     fetchCityList: (state, action: PayloadAction<ListParams>) => {
-      console.log('test');
       state.loading = true
     },
     fetchCityListSuccess: (state, action: PayloadAction<ListResponse<City>>) => {
@@ -53,14 +52,13 @@ export const selectCityListLoading = (state: RootState) => state.city.loading;
 export const selectCityListFilter = (state: RootState) => state.city.filter;
 export const selectCityListPagination = (state: RootState) => state.city.pagination;
 export const selectCityMap = createSelector(selectCityList, (cityList) =>
-  cityList.reduce((map: {[key: string]: City}, city) => {
+  cityList?.reduce((map: {[key: string]: City}, city) => {
     map[city.id] = city
-    console.log(map);
     return map
   }, {})
 )
 export const selectCityOptions = createSelector(selectCityList, (cityList) =>
-  cityList.map(city => ({
+  cityList?.map(city => ({
     label: city.name,
     value: city.id
   }))

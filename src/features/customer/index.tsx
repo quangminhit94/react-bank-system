@@ -12,13 +12,11 @@ export function CustomerPage () {
   // reuse /admin/customers from parent admin layout
   const match = useRouteMatch()
   const dispatch = useAppDispatch()
-  const filter = useAppSelector(selectAccountListFilter)
-  const cityFilter = useAppSelector(selectCityListFilter)
 
   React.useEffect(() => {
-    dispatch(accountActions.fetchAccountList(filter))
-    dispatch(cityActions.fetchCityList(cityFilter))
-  }, [dispatch, filter, cityFilter])
+    dispatch(accountActions.fetchAccountList({}))
+    dispatch(cityActions.fetchCityList({}))
+  }, [dispatch])
 
   return (
     <Box>

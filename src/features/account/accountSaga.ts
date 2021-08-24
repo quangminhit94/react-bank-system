@@ -6,6 +6,7 @@ import { accountActions } from "./accountSlice";
 
 function* fetchAccountList(action: PayloadAction<ListParams>) {
   try {
+    console.log(action.payload);
     const responseList: ListResponse<Account> = yield call(accountApi.getAll, action.payload)
     yield put(accountActions.fetchAccountListSuccess(responseList))
   } catch (error) {
